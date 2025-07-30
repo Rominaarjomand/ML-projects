@@ -39,4 +39,4 @@ This is a simple **content-based recommendation system** that suggests similar p
 3. Install required packages:
 
    ```bash
-   pip install pandas scikit-learn numpy
+   pip install pandas sklearn numpy
