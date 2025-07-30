@@ -1,27 +1,42 @@
-# Sinusoidal Signal Regression with Noise
+# 🛍️ Product Recommendation System
 
-This project demonstrates the creation and regression of a noisy sinusoidal signal using Python and scikit-learn. The goal is to compare how different regression methods perform in modeling the signal.
+This is a simple **content-based recommendation system** that suggests similar products based on their textual descriptions. It uses natural language processing techniques and cosine similarity to recommend items that are frequently bought together or have similar names.
 
-## 📌 Project Description
+---
 
-We generate a noisy sine wave using `numpy`, then apply four different regression techniques to model the data:
+## 📦 Dataset
 
-- **Linear Regression**
-- **Ridge Regression**
-- **Lasso Regression**
-- **ElasticNet Regression**
+- **Source:** [Online Retail Dataset on Kaggle](https://www.kaggle.com/datasets/ulrikthygepedersen/online-retail-dataset/data)
+- This dataset contains 500,000+ transactions from a UK-based online retail store between 2010 and 2011.
 
-The models are evaluated using **Mean Squared Error (MSE)**, and the results are visualized using `matplotlib`.
+---
 
-## 📁 Files
+## 🔧 Features
 
-- `main.py`: The main script that generates data, trains models, and plots the results.
-- `requirements.txt`: List of Python packages used in this project (optional, if you include it).
-- `README.md`: This file.
+- Text preprocessing of product descriptions  
+- Vectorization using `CountVectorizer`  
+- Similarity calculation using `cosine_similarity`  
+- Recommends top-N similar products based on user input  
+- Includes fuzzy matching to handle partial or misspelled names  
+- Handles missing values and noisy data
 
-## 🚀 How to Run
+---
 
-1. Clone the repository:
+## 🧠 How It Works
+
+1. **Data Cleaning**: Removes spaces, special characters, and null values.
+2. **Feature Creation**: Combines product name and code to form a unique text feature.
+3. **Vectorization**: Transforms text into numerical vectors using Bag-of-Words.
+4. **Similarity Matrix**: Computes pairwise cosine similarity between all products.
+5. **Recommendation**: When a product name is entered, it returns a sorted list of similar items with similarity scores.
+
+---
+
+## 🚀 Usage
+
+1. Clone this repository.
+2. Make sure the dataset file (`online_retail.csv`) is in the project directory.
+3. Install required packages:
+
    ```bash
-   git clone https://github.com/Rominaarjomand/ML-projects.git
-   cd ML-projects
+   pip install pandas scikit-learn numpy
